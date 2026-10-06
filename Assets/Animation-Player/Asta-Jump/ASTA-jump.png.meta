@@ -1,82 +1,82 @@
 fileFormatVersion: 2
-guid: 5ee1ffd281d0a4947bbb990624351412
+guid: 8c1694b71db09ff41bf4aae99068de6d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -392440114717473572
-    second: ASTA-run-v4_0
+      213: -223876609023813664
+    second: ASTA-jump_0
   - first:
-      213: 3196553337831701847
-    second: ASTA-run-v4_1
+      213: 8878568521507597466
+    second: ASTA-jump_1
   - first:
-      213: -2934855234119867399
-    second: ASTA-run-v4_2
+      213: -4886763975125454423
+    second: ASTA-jump_2
   - first:
-      213: -5945180653656346486
-    second: ASTA-run-v4_3
+      213: 5134308754214024441
+    second: ASTA-jump_3
   - first:
-      213: -521704958663252083
-    second: ASTA-run-v4_4
+      213: -4926932247071555049
+    second: ASTA-jump_4
   - first:
-      213: 6228419983729693046
-    second: ASTA-run-v4_5
+      213: 7956909286501035110
+    second: ASTA-jump_5
   - first:
-      213: -3094339695621637225
-    second: ASTA-run-v4_6
+      213: 423276167366317572
+    second: ASTA-jump_6
   - first:
-      213: -1397615828524903354
-    second: ASTA-run-v4_7
+      213: 4993066313630678833
+    second: ASTA-jump_7
   - first:
-      213: -323145638515564182
-    second: ASTA-run-v4_8
+      213: -4758985151365460979
+    second: ASTA-jump_8
   - first:
-      213: -1037725315975165517
-    second: ASTA-run-v4_9
+      213: -3608917210449588425
+    second: ASTA-jump_9
   - first:
-      213: 3476103125608808275
-    second: ASTA-run-v4_10
+      213: -3577026430981534071
+    second: ASTA-jump_10
   - first:
-      213: -2357180739097137274
-    second: ASTA-run-v4_11
+      213: 7352596221503850197
+    second: ASTA-jump_11
   - first:
-      213: -259763148285550286
-    second: ASTA-run-v4_12
+      213: -2440370241438378003
+    second: ASTA-jump_12
   - first:
-      213: 8063337397409564876
-    second: ASTA-run-v4_13
+      213: -1837903846415669427
+    second: ASTA-jump_13
   - first:
-      213: -7534710344778230282
-    second: ASTA-run-v4_14
+      213: 6140482738640185505
+    second: ASTA-jump_14
   - first:
-      213: -3781363607611370220
-    second: ASTA-run-v4_15
+      213: -5047234586269712972
+    second: ASTA-jump_15
   - first:
-      213: -1087694469811069203
-    second: ASTA-run-v4_16
+      213: 744952656439606266
+    second: ASTA-jump_16
   - first:
-      213: -3628754936214305249
-    second: ASTA-run-v4_17
+      213: 4179075904510933580
+    second: ASTA-jump_17
   - first:
-      213: -7364602336467970262
-    second: ASTA-run-v4_18
+      213: -8055329481815799438
+    second: ASTA-jump_18
   - first:
-      213: -6531182635101996192
-    second: ASTA-run-v4_19
+      213: -7427266509015899764
+    second: ASTA-jump_19
   - first:
-      213: 4085346726079158559
-    second: ASTA-run-v4_20
+      213: -2405909224874102793
+    second: ASTA-jump_20
   - first:
-      213: 7358827862509691647
-    second: ASTA-run-v4_21
+      213: -8102202537605791052
+    second: ASTA-jump_21
   - first:
-      213: 3532992121220497821
-    second: ASTA-run-v4_22
+      213: 8041312525005451394
+    second: ASTA-jump_22
   - first:
-      213: -1797418209626781309
-    second: ASTA-run-v4_23
+      213: -1744163524975378948
+    second: ASTA-jump_23
   - first:
-      213: -7207033446912198663
-    second: ASTA-run-v4_24
+      213: 1482201341624541110
+    second: ASTA-jump_24
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -224,7 +224,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ASTA-run-v4_0
+      name: ASTA-jump_0
       rect:
         serializedVersion: 2
         x: 0
@@ -239,14 +239,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: cd4c6ae7bc5cd8af0800000000000000
-      internalID: -392440114717473572
+      spriteID: 0e7dd950961a4ecf0800000000000000
+      internalID: -223876609023813664
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ASTA-run-v4_1
+      name: ASTA-jump_1
       rect:
         serializedVersion: 2
         x: 256
@@ -261,14 +261,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 75d3c0f13507c5c20800000000000000
-      internalID: 3196553337831701847
+      spriteID: a9cec669703073b70800000000000000
+      internalID: 8878568521507597466
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ASTA-run-v4_2
+      name: ASTA-jump_2
       rect:
         serializedVersion: 2
         x: 512
@@ -283,14 +283,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9f3e61fc6bc4547d0800000000000000
-      internalID: -2934855234119867399
+      spriteID: 9a1b8794e0abe2cb0800000000000000
+      internalID: -4886763975125454423
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ASTA-run-v4_3
+      name: ASTA-jump_3
       rect:
         serializedVersion: 2
         x: 768
@@ -305,14 +305,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a80f945c1b97e7da0800000000000000
-      internalID: -5945180653656346486
+      spriteID: 9f4fa16fb9ab04740800000000000000
+      internalID: 5134308754214024441
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ASTA-run-v4_4
+      name: ASTA-jump_4
       rect:
         serializedVersion: 2
         x: 1024
@@ -327,14 +327,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d87215daa1882c8f0800000000000000
-      internalID: -521704958663252083
+      spriteID: 71202eca93500abb0800000000000000
+      internalID: -4926932247071555049
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ASTA-run-v4_5
+      name: ASTA-jump_5
       rect:
         serializedVersion: 2
         x: 0
@@ -349,14 +349,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6711722c9facf6650800000000000000
-      internalID: 6228419983729693046
+      spriteID: 66ca6eba6de9c6e60800000000000000
+      internalID: 7956909286501035110
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ASTA-run-v4_6
+      name: ASTA-jump_6
       rect:
         serializedVersion: 2
         x: 256
@@ -371,14 +371,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 79bf41cf072be05d0800000000000000
-      internalID: -3094339695621637225
+      spriteID: 40612cd7e67cfd500800000000000000
+      internalID: 423276167366317572
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ASTA-run-v4_7
+      name: ASTA-jump_7
       rect:
         serializedVersion: 2
         x: 512
@@ -393,14 +393,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6445f401fcbaa9ce0800000000000000
-      internalID: -1397615828524903354
+      spriteID: 13ffceb9b5fea4540800000000000000
+      internalID: 4993066313630678833
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ASTA-run-v4_8
+      name: ASTA-jump_8
       rect:
         serializedVersion: 2
         x: 768
@@ -415,14 +415,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a61209df0c4f38bf0800000000000000
-      internalID: -323145638515564182
+      spriteID: d0cc0811830b4fdb0800000000000000
+      internalID: -4758985151365460979
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ASTA-run-v4_9
+      name: ASTA-jump_9
       rect:
         serializedVersion: 2
         x: 1024
@@ -437,14 +437,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3b9cedeb2524991f0800000000000000
-      internalID: -1037725315975165517
+      spriteID: 73fcb5ffaec8aedc0800000000000000
+      internalID: -3608917210449588425
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ASTA-run-v4_10
+      name: ASTA-jump_10
       rect:
         serializedVersion: 2
         x: 0
@@ -459,14 +459,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 35fb98420699d3030800000000000000
-      internalID: 3476103125608808275
+      spriteID: 98e8925b969db5ec0800000000000000
+      internalID: -3577026430981534071
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ASTA-run-v4_11
+      name: ASTA-jump_11
       rect:
         serializedVersion: 2
         x: 256
@@ -481,14 +481,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 68fe8be4b9c994fd0800000000000000
-      internalID: -2357180739097137274
+      spriteID: 5d6cd97ce4ba90660800000000000000
+      internalID: 7352596221503850197
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ASTA-run-v4_12
+      name: ASTA-jump_12
       rect:
         serializedVersion: 2
         x: 512
@@ -503,17 +503,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 231e3bcfac2256cf0800000000000000
-      internalID: -259763148285550286
+      spriteID: de791aee130122ed0800000000000000
+      internalID: -2440370241438378003
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ASTA-run-v4_13
+      name: ASTA-jump_13
       rect:
         serializedVersion: 2
-        x: 769
+        x: 768
         y: 512
         width: 256
         height: 256
@@ -525,14 +525,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: cc848bc34aab6ef60800000000000000
-      internalID: 8063337397409564876
+      spriteID: d47e11770347e76e0800000000000000
+      internalID: -1837903846415669427
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ASTA-run-v4_14
+      name: ASTA-jump_14
       rect:
         serializedVersion: 2
         x: 1024
@@ -547,14 +547,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6f5580eacd45f6790800000000000000
-      internalID: -7534710344778230282
+      spriteID: 1a8e0126480673550800000000000000
+      internalID: 6140482738640185505
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ASTA-run-v4_15
+      name: ASTA-jump_15
       rect:
         serializedVersion: 2
         x: 0
@@ -569,14 +569,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4151cb955d5e58bc0800000000000000
-      internalID: -3781363607611370220
+      spriteID: 4bdf35b92ee94f9b0800000000000000
+      internalID: -5047234586269712972
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ASTA-run-v4_16
+      name: ASTA-jump_16
       rect:
         serializedVersion: 2
         x: 256
@@ -591,14 +591,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: dee11ce74abb7e0f0800000000000000
-      internalID: -1087694469811069203
+      spriteID: afbf09d7e7a965a00800000000000000
+      internalID: 744952656439606266
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ASTA-run-v4_17
+      name: ASTA-jump_17
       rect:
         serializedVersion: 2
         x: 512
@@ -613,14 +613,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f16400a8c9214adc0800000000000000
-      internalID: -3628754936214305249
+      spriteID: c4ab4c9b46f0ff930800000000000000
+      internalID: 4179075904510933580
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ASTA-run-v4_18
+      name: ASTA-jump_18
       rect:
         serializedVersion: 2
         x: 768
@@ -635,14 +635,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a2790deb13dabc990800000000000000
-      internalID: -7364602336467970262
+      spriteID: 27943a7e388b53090800000000000000
+      internalID: -8055329481815799438
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ASTA-run-v4_19
+      name: ASTA-jump_19
       rect:
         serializedVersion: 2
         x: 1024
@@ -657,14 +657,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 06bbb8f3ff39c55a0800000000000000
-      internalID: -6531182635101996192
+      spriteID: c81a3fd167c0de890800000000000000
+      internalID: -7427266509015899764
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ASTA-run-v4_20
+      name: ASTA-jump_20
       rect:
         serializedVersion: 2
         x: 0
@@ -679,14 +679,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f19d048c33112b830800000000000000
-      internalID: 4085346726079158559
+      spriteID: 7ff2b899e4e7c9ed0800000000000000
+      internalID: -2405909224874102793
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ASTA-run-v4_21
+      name: ASTA-jump_21
       rect:
         serializedVersion: 2
         x: 256
@@ -701,14 +701,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ff22324c3fecf1660800000000000000
-      internalID: 7358827862509691647
+      spriteID: 4b20db728b13f8f80800000000000000
+      internalID: -8102202537605791052
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ASTA-run-v4_22
+      name: ASTA-jump_22
       rect:
         serializedVersion: 2
         x: 512
@@ -723,14 +723,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d910a9b9d95b70130800000000000000
-      internalID: 3532992121220497821
+      spriteID: 28079d4032b789f60800000000000000
+      internalID: 8041312525005451394
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ASTA-run-v4_23
+      name: ASTA-jump_23
       rect:
         serializedVersion: 2
         x: 768
@@ -745,14 +745,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 389806659a94e07e0800000000000000
-      internalID: -1797418209626781309
+      spriteID: cfd36a7d38c7bc7e0800000000000000
+      internalID: -1744163524975378948
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ASTA-run-v4_24
+      name: ASTA-jump_24
       rect:
         serializedVersion: 2
         x: 1024
@@ -767,8 +767,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9f77078b3497bfb90800000000000000
-      internalID: -7207033446912198663
+      spriteID: 6bf53256446d19410800000000000000
+      internalID: 1482201341624541110
       vertices: []
       indices: 
       edges: []
@@ -777,7 +777,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 97fea3baf8b05c94b84fdfe548157b84
+    spriteID: 69b0a376f9ea77d438d1f42837eb3f0d
     internalID: 0
     vertices: []
     indices: 
@@ -789,31 +789,31 @@ TextureImporter:
       - key: SpriteEditor.SliceSettings
         value: '{"sliceOnImport":false,"gridCellCount":{"x":5.0,"y":5.0},"gridSpriteSize":{"x":256.0,"y":256.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      ASTA-run-v4_0: -392440114717473572
-      ASTA-run-v4_1: 3196553337831701847
-      ASTA-run-v4_10: 3476103125608808275
-      ASTA-run-v4_11: -2357180739097137274
-      ASTA-run-v4_12: -259763148285550286
-      ASTA-run-v4_13: 8063337397409564876
-      ASTA-run-v4_14: -7534710344778230282
-      ASTA-run-v4_15: -3781363607611370220
-      ASTA-run-v4_16: -1087694469811069203
-      ASTA-run-v4_17: -3628754936214305249
-      ASTA-run-v4_18: -7364602336467970262
-      ASTA-run-v4_19: -6531182635101996192
-      ASTA-run-v4_2: -2934855234119867399
-      ASTA-run-v4_20: 4085346726079158559
-      ASTA-run-v4_21: 7358827862509691647
-      ASTA-run-v4_22: 3532992121220497821
-      ASTA-run-v4_23: -1797418209626781309
-      ASTA-run-v4_24: -7207033446912198663
-      ASTA-run-v4_3: -5945180653656346486
-      ASTA-run-v4_4: -521704958663252083
-      ASTA-run-v4_5: 6228419983729693046
-      ASTA-run-v4_6: -3094339695621637225
-      ASTA-run-v4_7: -1397615828524903354
-      ASTA-run-v4_8: -323145638515564182
-      ASTA-run-v4_9: -1037725315975165517
+      ASTA-jump_0: -223876609023813664
+      ASTA-jump_1: 8878568521507597466
+      ASTA-jump_10: -3577026430981534071
+      ASTA-jump_11: 7352596221503850197
+      ASTA-jump_12: -2440370241438378003
+      ASTA-jump_13: -1837903846415669427
+      ASTA-jump_14: 6140482738640185505
+      ASTA-jump_15: -5047234586269712972
+      ASTA-jump_16: 744952656439606266
+      ASTA-jump_17: 4179075904510933580
+      ASTA-jump_18: -8055329481815799438
+      ASTA-jump_19: -7427266509015899764
+      ASTA-jump_2: -4886763975125454423
+      ASTA-jump_20: -2405909224874102793
+      ASTA-jump_21: -8102202537605791052
+      ASTA-jump_22: 8041312525005451394
+      ASTA-jump_23: -1744163524975378948
+      ASTA-jump_24: 1482201341624541110
+      ASTA-jump_3: 5134308754214024441
+      ASTA-jump_4: -4926932247071555049
+      ASTA-jump_5: 7956909286501035110
+      ASTA-jump_6: 423276167366317572
+      ASTA-jump_7: 4993066313630678833
+      ASTA-jump_8: -4758985151365460979
+      ASTA-jump_9: -3608917210449588425
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

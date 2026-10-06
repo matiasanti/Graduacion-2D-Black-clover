@@ -8,12 +8,13 @@ public class NewMonoBehaviourScript : MonoBehaviour
     bool isGrounded = false;
     Rigidbody2D rb;
     SpriteRenderer sprite;
-
+    Animator anim;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         sprite = GetComponent<SpriteRenderer>();
+        anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -38,5 +39,17 @@ public class NewMonoBehaviourScript : MonoBehaviour
         Collider2D col = GetComponent<Collider2D>();
         // Creando un área circular debajo de los pies del personaje
         isGrounded = Physics2D.OverlapCircle(transform.position - transform.up * ((col.bounds.extents.y / transform.localScale.y - col.offset.y) * transform.localScale.y), 0.01f, groundLayer);
+        if (horizontalInput != 0)
+        {
+            anim.SetBool("Run", true);
+        }
+        else
+        {
+            anim.SetBool("Run", false);
+        }
+        
+        anim.SetFloat("Y", rb.velocity.y);
+        if (isGrounded) 
+            anim.SetFloat("Y", 0); 
     }
 }

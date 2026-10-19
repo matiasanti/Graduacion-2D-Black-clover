@@ -13,27 +13,32 @@ public class EnemyInteligent : MonoBehaviour
     [SerializeField, Min(0f)] private float patrolDistance = 2f;
     [SerializeField, Min(0f)] private float patrolSpeed = 1.5f;
     [SerializeField, Min(0f)] private float chaseSpeed = 3.5f;
+    [SerializeField, Min(0f)] private float attackRange = 0.4f;
+    [SerializeField, Min(0f)] private float damagePerAttack = 10f;
+    [SerializeField, Min(0.1f)] private float attackCooldown = 1f;
 
     private Rigidbody2D body;
     private Animator animator;
     private SpriteRenderer spriteRenderer;
+    private PlayerControl playerControl;
+    private Collider2D enemyCollider;
+    private Collider2D playerCollider;
     private float patrolCenterX;
     private int patrolDirection = 1;
+    private float nextAttackTime;
 
     private void Awake()
     {
         body = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        enemyCollider = GetComponent<Collider2D>();
         patrolCenterX = transform.position.x;
 
         if (player == null)
         {
-            GameObject playerObject = GameObject.Find("Player");
-            if (playerObject != null)
-            {
-                player = playerObject.transform;
-            }
+            PlayerControl foundPlayer = FindObjectOfType<PlayerControl>();
+            player = foundPlayer != null ? foundPlayer.transform : null;
         }
 
         if (player == null)
@@ -42,11 +47,23 @@ public class EnemyInteligent : MonoBehaviour
                 "EnemyInteligent necesita una referencia al jugador. Asigna el campo Player en el Inspector.",
                 this);
             enabled = false;
+            return;
+        }
+
+        playerControl = player.GetComponent<PlayerControl>();
+        playerCollider = player.GetComponent<Collider2D>();
+        if (playerControl == null)
+        {
+            Debug.LogError(
+                "El objeto asignado como jugador necesita el componente PlayerControl para recibir daño.",
+                this);
         }
     }
 
     private void FixedUpdate()
     {
+        TryAttackPlayer();
+
         float horizontalDifference = player.position.x - transform.position.x;
         float verticalDifference = Mathf.Abs(player.position.y - transform.position.y);
 
@@ -73,6 +90,32 @@ public class EnemyInteligent : MonoBehaviour
         FaceDirection(direction);
         SetHorizontalVelocity(direction * chaseSpeed);
         SetAnimationState(isMoving: true, isChasing: true);
+    }
+
+    private void TryAttackPlayer()
+    {
+        if (playerControl == null || Time.time < nextAttackTime)
+        {
+            return;
+        }
+
+        bool isInAttackRange;
+        if (enemyCollider != null && playerCollider != null)
+        {
+            isInAttackRange = enemyCollider.Distance(playerCollider).distance <= attackRange;
+        }
+        else
+        {
+            isInAttackRange = Vector2.Distance(transform.position, player.position) <= Mathf.Max(attackRange, 1.2f);
+        }
+
+        if (!isInAttackRange)
+        {
+            return;
+        }
+
+        playerControl.TakeDamage(damagePerAttack);
+        nextAttackTime = Time.time + Mathf.Max(0.1f, attackCooldown);
     }
 
     private void Patrol()

@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerControl : MonoBehaviour
 {
@@ -16,10 +17,24 @@ public class PlayerControl : MonoBehaviour
     [SerializeField] float speed = 5f;
     [SerializeField] float jumpForce = 7f;
     [SerializeField] LayerMask groundLayer;
+    [SerializeField, Min(1f)] private float maxHealth = 100f;
+
     bool isGrounded = false;
     Rigidbody2D rb;
     SpriteRenderer sprite;
     Animator anim;
+    private float currentHealth;
+    private PlayerHUD playerHUD;
+    private bool isGameOver;
+
+    public float CurrentHealth => currentHealth;
+    public float MaxHealth => maxHealth;
+
+    private void Awake()
+    {
+        maxHealth = Mathf.Max(1f, maxHealth);
+        currentHealth = maxHealth;
+    }
 
     public static KeyCode GetKey(Control control)
     {
@@ -78,10 +93,58 @@ public class PlayerControl : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         sprite = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
+        playerHUD = PlayerHUD.Create(FindObjectOfType<Canvas>());
+        UpdateHealthBar();
+    }
+
+    public void TakeDamage(float damage)
+    {
+        if (damage <= 0f || isGameOver)
+        {
+            return;
+        }
+
+        currentHealth = Mathf.Max(0f, currentHealth - damage);
+        UpdateHealthBar();
+        if (currentHealth <= 0f)
+        {
+            ShowGameOver();
+        }
+    }
+
+    private void UpdateHealthBar()
+    {
+        playerHUD.SetHealth(currentHealth, maxHealth);
+    }
+
+    private void ShowGameOver()
+    {
+        isGameOver = true;
+        rb.velocity = Vector2.zero;
+        rb.simulated = false;
+        Time.timeScale = 0f;
+        playerHUD.ShowGameOver(RestartGame, GoToMenu);
+    }
+
+    private void RestartGame()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    private void GoToMenu()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene("MainMenu");
     }
 
     void Update()
     {
+        if (isGameOver)
+        {
+            return;
+        }
+
         float horizontalInput = (Input.GetKey(GetKey(Control.Right)) ? 1f : 0f)
             - (Input.GetKey(GetKey(Control.Left)) ? 1f : 0f);
         if (horizontalInput == 0f

@@ -47,11 +47,39 @@ public sealed class PlayerHUD
 
     public void ShowGameOver(UnityAction restartAction, UnityAction menuAction)
     {
-        GameObject overlay = CreateUiElement("GameOverScreen", canvas.transform, typeof(Image));
+        ShowEndScreen(
+            "GameOverScreen",
+            "GAME OVER",
+            "Tu aventura termina aquí",
+            new Color(0.9f, 0.19f, 0.15f, 1f),
+            restartAction,
+            menuAction);
+    }
+
+    public void ShowVictory(UnityAction restartAction, UnityAction menuAction)
+    {
+        ShowEndScreen(
+            "VictoryScreen",
+            "¡VICTORIA!",
+            "Has completado el nivel",
+            new Color(0.95f, 0.83f, 0.35f, 1f),
+            restartAction,
+            menuAction);
+    }
+
+    private void ShowEndScreen(
+        string screenName,
+        string titleText,
+        string messageText,
+        Color titleColor,
+        UnityAction restartAction,
+        UnityAction menuAction)
+    {
+        GameObject overlay = CreateUiElement(screenName, canvas.transform, typeof(Image));
         SetStretch(overlay.GetComponent<RectTransform>(), Vector2.zero, Vector2.zero);
         overlay.GetComponent<Image>().color = new Color(0.015f, 0.02f, 0.025f, 0.82f);
 
-        GameObject panel = CreateUiElement("GameOverPanel", overlay.transform, typeof(Image));
+        GameObject panel = CreateUiElement(screenName + "Panel", overlay.transform, typeof(Image));
         RectTransform panelRect = panel.GetComponent<RectTransform>();
         panelRect.anchorMin = new Vector2(0.5f, 0.5f);
         panelRect.anchorMax = new Vector2(0.5f, 0.5f);
@@ -66,23 +94,23 @@ public sealed class PlayerHUD
         SetStretch(innerPanel.rectTransform, new Vector2(5f, 5f), new Vector2(-5f, -5f));
 
         Text title = CreateText(
-            "GAME OVER",
+            titleText,
             panel.transform,
             40,
             TextAnchor.MiddleCenter,
-            new Color(0.9f, 0.19f, 0.15f, 1f));
+            titleColor);
         SetRect(title.rectTransform, new Vector2(0f, -40f), new Vector2(390f, 62f), new Vector2(0.5f, 1f), new Vector2(0.5f, 1f));
 
         Text message = CreateText(
-            "Tu aventura termina aquí",
+            messageText,
             panel.transform,
             18,
             TextAnchor.MiddleCenter,
             new Color(0.85f, 0.8f, 0.72f, 1f));
         SetRect(message.rectTransform, new Vector2(0f, -108f), new Vector2(390f, 36f), new Vector2(0.5f, 1f), new Vector2(0.5f, 1f));
 
-        CreateGameOverButton(panel.transform, "RESTART", new Vector2(0f, -195f), restartAction);
-        CreateGameOverButton(panel.transform, "GO TO MENU", new Vector2(0f, -260f), menuAction);
+        CreateEndScreenButton(panel.transform, "RESTART", new Vector2(0f, -195f), restartAction);
+        CreateEndScreenButton(panel.transform, "GO TO MENU", new Vector2(0f, -260f), menuAction);
     }
 
     private void CreateHealthBar()
@@ -130,7 +158,7 @@ public sealed class PlayerHUD
         }
     }
 
-    private static void CreateGameOverButton(Transform parent, string label, Vector2 position, UnityAction action)
+    private static void CreateEndScreenButton(Transform parent, string label, Vector2 position, UnityAction action)
     {
         GameObject buttonObject = CreateUiElement(
             "Button_" + label.Replace(" ", string.Empty),

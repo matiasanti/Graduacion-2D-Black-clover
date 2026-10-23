@@ -18,6 +18,7 @@ public class PlayerControl : MonoBehaviour
     [SerializeField] float jumpForce = 7f;
     [SerializeField] LayerMask groundLayer;
     [SerializeField, Min(1f)] private float maxHealth = 100f;
+    [SerializeField] private float fallGameOverY = -50f;
 
     bool isGrounded = false;
     Rigidbody2D rb;
@@ -25,7 +26,7 @@ public class PlayerControl : MonoBehaviour
     Animator anim;
     private float currentHealth;
     private PlayerHUD playerHUD;
-    private bool isGameOver;
+    private bool isGameEnded;
 
     public float CurrentHealth => currentHealth;
     public float MaxHealth => maxHealth;
@@ -99,7 +100,7 @@ public class PlayerControl : MonoBehaviour
 
     public void TakeDamage(float damage)
     {
-        if (damage <= 0f || isGameOver)
+        if (damage <= 0f || isGameEnded)
         {
             return;
         }
@@ -119,11 +120,25 @@ public class PlayerControl : MonoBehaviour
 
     private void ShowGameOver()
     {
-        isGameOver = true;
+        isGameEnded = true;
         rb.velocity = Vector2.zero;
         rb.simulated = false;
         Time.timeScale = 0f;
         playerHUD.ShowGameOver(RestartGame, GoToMenu);
+    }
+
+    public void FinishLevel()
+    {
+        if (isGameEnded)
+        {
+            return;
+        }
+
+        isGameEnded = true;
+        rb.velocity = Vector2.zero;
+        rb.simulated = false;
+        Time.timeScale = 0f;
+        playerHUD.ShowVictory(RestartGame, GoToMenu);
     }
 
     private void RestartGame()
@@ -140,8 +155,14 @@ public class PlayerControl : MonoBehaviour
 
     void Update()
     {
-        if (isGameOver)
+        if (isGameEnded)
         {
+            return;
+        }
+
+        if (transform.position.y <= fallGameOverY)
+        {
+            ShowGameOver();
             return;
         }
 
